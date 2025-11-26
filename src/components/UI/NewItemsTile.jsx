@@ -1,29 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import CountdownTimer from "./CountdownTimer";
 
 export default function NewItemsTile({ authorId, authorImage, nftImage, nftId, title, price, likes, expiryDate }) {
-
-    const [secondsLeft, setSecondsLeft] = useState()
-    const [minutesLeft, setMinutesLeft] = useState()
-    const [hoursLeft, setHoursLeft] = useState()
-
-    useEffect(() => {
-        if (expiryDate) {
-            let interval = setInterval(calculateExpiration, 1000)
-            return () => clearInterval(interval)
-        }
-    }, [])
-
-    function calculateExpiration() {
-        const milliSecondsLeft = expiryDate - Date.now()
-        const seconds = milliSecondsLeft / 1000
-        const minutes = seconds / 60
-        const hours =  minutes / 60
-        
-        setSecondsLeft(Math.floor(seconds) % 60)
-        setMinutesLeft(Math.floor(minutes) % 60)
-        setHoursLeft(Math.floor(hours))
-    }
 
     return (
         <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" style={{ width: "100%", maxWidth: "100%", padding: "0" }} >
@@ -35,9 +14,7 @@ export default function NewItemsTile({ authorId, authorImage, nftImage, nftId, t
                     </Link>
                 </div>
                 {expiryDate && (
-                    <div className="de_countdown">
-                        {hoursLeft}h {minutesLeft}m {secondsLeft}s
-                    </div>
+                    <CountdownTimer expiryDate={expiryDate} />
                 )}
                 <div className="nft__item_wrap">
                     <div className="nft__item_extra">
