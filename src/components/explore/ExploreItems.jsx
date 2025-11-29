@@ -41,7 +41,7 @@ const ExploreItems = () => {
   function skeletonRender() {
     return (
       new Array(8).fill(0).map((_, i) => (
-        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" style={{ width: "100%", maxWidth: "100%", padding: "0" }}>
+        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
           <div className="nft__item">
             <div className="author_list_pp">
               <Skeleton width="50px" height="50px" borderRadius="50%" />
@@ -68,7 +68,7 @@ const ExploreItems = () => {
     return (
       itemsData.slice(0, sliceLength).map((item) => (
         <NewItemsTile authorId={item.authorId} authorImage={item.authorImage} nftImage={item.nftImage} nftId={item.nftId}
-          title={item.title} price={item.price} likes={item.likes} expiryDate={item.expiryDate} key={item.id} />
+          title={item.title} price={item.price} likes={item.likes} expiryDate={item.expiryDate} useCarousel={false} key={item.id} />
       ))
     )
   }

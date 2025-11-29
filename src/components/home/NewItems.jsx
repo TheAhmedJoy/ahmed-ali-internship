@@ -54,7 +54,7 @@ const NewItems = () => {
     return (
       newItemsData.map((item) => (
         <NewItemsTile authorId={item.authorId} authorImage={item.authorImage} nftImage={item.nftImage} nftId={item.nftId}
-          title={item.title} price={item.price} likes={item.likes} expiryDate={item.expiryDate} key={item.id} />
+          title={item.title} price={item.price} likes={item.likes} expiryDate={item.expiryDate} useCarousel={true} key={item.id} />
       ))
     )
   }

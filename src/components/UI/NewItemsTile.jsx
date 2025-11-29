@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
 
-export default function NewItemsTile({ authorId, authorImage, nftImage, nftId, title, price, likes, expiryDate }) {
+export default function NewItemsTile({ authorId, authorImage, nftImage, nftId, title, price, likes, expiryDate, useCarousel }) {
+
+    const carouselStyling = useCarousel ? { width: "100%", maxWidth: "100%", padding: "0" } : undefined;
 
     return (
-        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" style={{ width: "100%", maxWidth: "100%", padding: "0" }} >
+        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" style={carouselStyling}>
             <div className="nft__item">
                 <div className="author_list_pp">
                     <Link to={`/author/`} >
