@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios"
 import Skeleton from "../components/UI/Skeleton";
-import AuthorBanner from "../images/author_banner.jpg";
 import AuthorItems from "../components/author/AuthorItems";
+import AuthorBanner from "../images/author_banner.jpg";
 
 
 const Author = () => {

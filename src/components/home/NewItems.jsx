@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
-import { Link } from "react-router-dom";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
