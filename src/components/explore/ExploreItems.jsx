@@ -41,7 +41,7 @@ const ExploreItems = () => {
   function skeletonRender() {
     return (
       new Array(8).fill(0).map((_, i) => (
-        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={i} data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
           <div className="nft__item">
             <div className="author_list_pp">
               <Skeleton width="50px" height="50px" borderRadius="50%" />

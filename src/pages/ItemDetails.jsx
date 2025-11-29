@@ -26,10 +26,10 @@ const ItemDetails = () => {
   function skeletonRender() {
     return (
       <>
-        <div className="col-md-6 text-center">
+        <div className="col-md-6 text-center" data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
           <Skeleton width="100%" height="100%" />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6" data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
           <div className="item_info">
             <Skeleton width="300px" height="40px" />
             <div className="item_info_counts">
@@ -78,10 +78,10 @@ const ItemDetails = () => {
   function renderItemDetails() {
     return (
       <>
-        <div className="col-md-6 text-center">
+        <div className="col-md-6 text-center" data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
           <img src={itemDetailsData.nftImage} className="img-fluid img-rounded mb-sm-30 nft-image" alt="" />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6" data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
           <div className="item_info">
             <h2>{itemDetailsData.title} #{itemDetailsData.tag}</h2>
             <div className="item_info_counts">
