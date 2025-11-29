@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const BrowseByCategory = () => {
   return (
-    <section id="section-category" className="no-top">
+    <section id="section-category" className="no-top" data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

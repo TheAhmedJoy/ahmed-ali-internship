@@ -37,7 +37,7 @@ const Author = () => {
   function skeletonRender() {
     return (
       <>
-        <div className="col-md-12">
+        <div className="col-md-12" data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
           <div className="d_profile de-flex">
             <div className="de-flex-col">
               <div className="profile_avatar">
@@ -67,7 +67,7 @@ const Author = () => {
           </div>
         </div>
         {new Array(8).fill(0).map((_, i) => (
-          <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={i} data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
             <div className="nft__item">
               <div className="author_list_pp">
                 <Skeleton width="50px" height="50px" borderRadius="50%" />
@@ -94,7 +94,7 @@ const Author = () => {
   function renderAuthor() {
     return (
       <>
-        <div className="col-md-12">
+        <div className="col-md-12" data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
           <div className="d_profile de-flex">
             <div className="de-flex-col">
               <div className="profile_avatar">
@@ -126,9 +126,9 @@ const Author = () => {
           </div>
         </div>
 
-        <div className="col-md-12">
+        <div className="col-md-12" data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
           <div className="de_tab tab_simple">
-            <AuthorItems authorItems={authorItems} authorImage={authorData.authorImage} />
+            <AuthorItems authorItems={authorItems} authorImage={authorData.authorImage} key={authorData.id}/>
           </div>
         </div>
       </>

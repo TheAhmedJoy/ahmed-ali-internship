@@ -5,6 +5,9 @@ import Author from "./pages/Author";
 import ItemDetails from "./pages/ItemDetails";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Aos from "aos";
+import "aos/dist/aos.css";
+Aos.init();
 
 function App() {
   return (

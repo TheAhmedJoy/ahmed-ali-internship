@@ -7,7 +7,7 @@ export default function NewItemsTile({ authorId, authorImage, nftImage, nftId, t
     const carouselStyling = useCarousel ? { width: "100%", maxWidth: "100%", padding: "0" } : undefined;
 
     return (
-        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" style={carouselStyling}>
+        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" style={carouselStyling} data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
             <div className="nft__item">
                 <div className="author_list_pp">
                     <Link to={`/author/${authorId}`} >

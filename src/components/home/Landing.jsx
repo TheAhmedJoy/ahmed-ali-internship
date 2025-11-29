@@ -15,7 +15,7 @@ const Landing = () => {
       <div className="v-center">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-md-6">
+            <div className="col-md-6" data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
               <div className="spacer-single"></div>
               <h6>
                 <span className="text-uppercase id-color-2">
